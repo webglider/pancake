@@ -21,8 +21,8 @@ add_dependencies(storage_interface_test cpp_redis)
 target_link_libraries(storage_interface_test
         Threads::Threads
         ${CPP_REDIS_LIBRARIES}
-        ${SSDB_CLIENT_LIBRARY}
-        ${LEVELDB_LIBRARY}
+        # ${SSDB_CLIENT_LIBRARY}
+        # ${LEVELDB_LIBRARY}
         ${SNAPPY_LIBRARY}
         ${JEMALLOC_LIBRARY}
         ${CMAKE_DL_LIBS}
@@ -127,8 +127,8 @@ target_link_libraries(pancake_test
         ${LIBEVENT_LIBRARY}
         ${CPP_REDIS_LIBRARIES}
         ${OPENSSL_LIBRARIES}
-        ${SSDB_CLIENT_LIBRARY}
-        ${LEVELDB_LIBRARY}
+        # ${SSDB_CLIENT_LIBRARY}
+        # ${LEVELDB_LIBRARY}
         ${SNAPPY_LIBRARY}
         ${JEMALLOC_LIBRARY}
         ${CMAKE_DL_LIBS}
