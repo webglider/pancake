@@ -12,8 +12,8 @@ add_executable(storage_interface_test
         ../libstorage/src/storage_interface.h
         ../libstorage/src/redis.cpp
         ../libstorage/src/redis.h
-        ../libstorage/src/rocksdb.cpp
-        ../libstorage/src/rocksdb.h
+        # ../libstorage/src/rocksdb.cpp
+        # ../libstorage/src/rocksdb.h
         #../libstorage/src/src/memcached.cpp
         #../libstorage/src/src/memcached.h
         )
@@ -114,12 +114,12 @@ add_executable(pancake_test
         ../libstorage/src/storage_interface.h
         ../libstorage/src/redis.h
         ../libstorage/src/redis.cpp
-        ../libstorage/src/rocksdb.cpp
-        ../libstorage/src/rocksdb.h
+        # ../libstorage/src/rocksdb.cpp
+        # ../libstorage/src/rocksdb.h
         #../libstorage/src/memcached.cpp
         #../libstorage/src/memcached.h
         ../service/src/thrift_utils.h)
-add_dependencies(pancake_test cpp_redis ssdb_rocks libcuckoo openssl_ep thrift_ep)
+add_dependencies(pancake_test cpp_redis libcuckoo openssl_ep thrift_ep)
 target_link_libraries(pancake_test
         Threads::Threads
         ${THRIFTNB_LIBRARY}

@@ -54,12 +54,12 @@ add_executable(proxy_benchmark
         ../libstorage/src/storage_interface.h
         ../libstorage/src/redis.h
         ../libstorage/src/redis.cpp
-        ../libstorage/src/rocksdb.cpp
-        ../libstorage/src/rocksdb.h
+        # ../libstorage/src/rocksdb.cpp
+        # ../libstorage/src/rocksdb.h
         #../libstorage/src/memcached.cpp
         #../libstorage/src/memcached.h
         ../service/src/thrift_utils.h)
-add_dependencies(proxy_benchmark cpp_redis ssdb_rocks libcuckoo openssl_ep thrift_ep)
+add_dependencies(proxy_benchmark cpp_redis libcuckoo openssl_ep thrift_ep)
 target_link_libraries(proxy_benchmark
         ${THRIFTNB_LIBRARY}
         ${THRIFT_LIBRARY}

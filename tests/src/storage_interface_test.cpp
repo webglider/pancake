@@ -4,7 +4,7 @@
 #include "storage_interface.h"
 #include "redis.h"
 //#include "memcached.h"
-#include "rocksdb.h"
+// #include "rocksdb.h"
 #include "assert.h"
 #include <iostream>
 #include <cstring>
@@ -59,9 +59,9 @@ int main(int argc, char* argv[]) {
         run_basic_test(std::make_shared<redis>("127.0.0.1", 5000));
     }
 
-    if (opts.testing_rocksdb){
-        run_basic_test(std::make_shared<rocksdb>("127.0.0.1", 5001));
-    }
+    // if (opts.testing_rocksdb){
+    //     run_basic_test(std::make_shared<rocksdb>("127.0.0.1", 5001));
+    // }
 
     if (opts.testing_memcached){
         //auto memcached_client = new memcached("127.0.0.1", 5002);
