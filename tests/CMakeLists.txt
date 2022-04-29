@@ -17,7 +17,7 @@ add_executable(storage_interface_test
         #../libstorage/src/src/memcached.cpp
         #../libstorage/src/src/memcached.h
         )
-add_dependencies(storage_interface_test cpp_redis ssdb_rocks)
+add_dependencies(storage_interface_test cpp_redis)
 target_link_libraries(storage_interface_test
         Threads::Threads
         ${CPP_REDIS_LIBRARIES}
